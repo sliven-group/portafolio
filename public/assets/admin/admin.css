@@ -1,0 +1,17 @@
+.acf-admin-notice.notice.notice-warning {
+	display: none !important;
+}
+#tmpl-acf-field-group-pro-features{
+	display: none !important;
+}
+#menu-posts .wp-submenu.wp-submenu-wrap li:last-child{
+	display: none !important;
+}
+
+/* ACF OCULTAR */
+/* #toplevel_page_edit-post_type-acf-field-group{
+	display: none !important;
+}
+tr[data-slug="advanced-custom-fields-pro"]{
+	display: none !important;
+} */
