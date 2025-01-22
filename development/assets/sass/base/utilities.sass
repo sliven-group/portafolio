@@ -1,0 +1,163 @@
+// Mixins
+
+=fonts($fontSize,$fontFamily,$colors)
+	font-size : $fontSize
+	font-family : $fontFamily
+	color : $colors
+
+// filters(color,opas)
+// 	background-color rgba(color,opas)
+	
+=expands
+	position: absolute 
+	width: 100%
+	height: 100%
+	left: 0px
+	top: 0px
+	
+=backgroundsize
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	
+
+=transition-all
+	transition: all 0.5s
+	
+// =placeholder($color,$famyli)
+// 	::-webkit-input-placeholder  color $color font-family $famyli 
+// 	:-moz-placeholder  color $color font-family $famyli
+// 	::-moz-placeholder  color $color font-family $famyli
+// 	:-ms-input-placeholder  color $color font-family $famyli
+	
+
+=using-flex($direction, $justify-content, $align-items)
+	display: flex
+	flex-flow: $direction wrap
+	justify-content: $justify-content
+	align-items: $align-items
+	
+
+
+=img-res
+	max-width: 100%
+	width: 100%
+	height: auto
+	display: block
+	
+.ul-style
+	ul, ol
+		padding-left: 20px
+	ul
+		li
+			list-style-type: inherit
+	ol
+		li
+			list-style-type: inherit
+				
+
+// HOVER
+
+=g-hover($fondo,$col)
+	&:hover
+		background: $fondo
+		color: $col
+		transition: all 400ms ease 
+
+// FLEX-BLOX
+
+=flexbox($vertical,$horizontal)
+	display: flex
+	justify-content: $horizontal
+	align-items: $vertical
+
+
+// ORDENANDO ITEMS
+
+=listItems($ml, $wh)
+	display: flex
+	flex-flow: row wrap
+	margin: 0 (-$ml) 0 (-$ml)
+	.g4-item
+		width: 100%/$wh
+		// display: flex 
+		padding: 0 $ml 0 $ml
+		box-sizing: border-box 
+		margin-bottom: $ml*2
+		figure
+			margin: 0 auto
+			font-size: 0px
+			img
+				display: block
+				max-width: 100%
+				height: auto
+				margin: auto
+// FIN ORDENANDO ITEMS
+
+// BACKGROUND IMAGENES
+
+=expands
+	position: absolute 
+	width: 100%
+	height: 100%
+	left: 0px
+	top: 0px
+
+=backgroundsize
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+
+// BACKGROUND IMAGENES
+
+
+// DATA SLIDER
+
+=heightSlider($height)
+	height: $height
+	.owl-carousel,
+	.owl-stage-outer,
+	.owl-stage,
+	.owl-item
+		height: 100%
+
+=heightFull($hFooter)
+	height: calc(100vh - $hFooter)
+	
+
+=flexg($vertical,$horizontal)
+	display: flex
+	align-items: $vertical
+	justify-content: $horizontal
+
+=opacity0()
+	opacity: 0
+	visibility: hidden
+	transition: all 400ms ease
+
+=opacity1()
+	opacity: 1
+	visibility: visible
+	transition: all 400ms ease
+
+=textg($family,$lineh,$clr)
+	font-family: $family
+	line-height: $lineh
+	color: $clr
+
+=fontg($n, $p)
+	font-size: calc(#{$n}px + (#{$p} - #{$n}) * ((100vw - 375px) / (1920 - 375)))
+
+=widthg($n, $p)
+	width: calc(#{$n}px + (#{$p} - #{$n}) * ((100vw - 375px) / (1920 - 375)))
+	
+=heightg($n, $p)
+	height: calc(#{$n}px + (#{$p} - #{$n}) * ((100vw - 375px) / (1920 - 375)))
+// FIN DATA SLIDER
+=textcustom($weight,$p, $n, $line,$color)
+	font-weight: $weight
+	line-height: $line
+	color: $color	
+	font-size: calc(#{$n}px + (#{$p} - #{$n}) * ((100vw - 375px) / (1920 - 375)))
+	@media screen and (max-width: 768px)
+		line-height: inherit

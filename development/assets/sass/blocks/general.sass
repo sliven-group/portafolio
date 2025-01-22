@@ -1,0 +1,51 @@
+@media screen and (min-width: 1024px)
+	.scroll-item
+		opacity: 0
+	.initAnima
+		will-change: transform
+		opacity: 0
+		transition: opacity 1s cubic-bezier(.165,.84,.44,1),transform 1s cubic-bezier(.165,.84,.44,1)
+		transform: translateY(4rem)
+		transform-origin: top center
+		&.animaActive
+			opacity: 1
+			transform: translateY(0)
+	.down-up,
+	.up-down,
+	.left-right,
+	.right-left,
+	.small-big,
+	.big-small,
+	.opacity
+		transform-origin: top center
+		will-change: transform
+		opacity: 0
+		transition: opacity 1s cubic-bezier(.165,.84,.44,1),transform 1s cubic-bezier(.165,.84,.44,1)
+		&.active
+			opacity: 1
+	.down-up
+		transform: scaleY(1.26) translateY(2rem)
+		&.active
+			transform: scaleY(1) translateY(0)
+	.up-down
+		transform: translateY(-2rem)
+		&.active
+			transform: translateY(0)
+	.left-right
+		transform: translateX(-2rem)
+		&.active
+			transform: translateX(0)
+	.right-left
+		transform: translateX(4rem)
+		&.active
+			transform: translateX(0)
+	.small-big
+		transform: scale(0.9)
+		&.active
+			transform: scale(1)
+	.big-small
+		transform: scale(1.10)
+		&.active
+			transform: scale(1)
+
+

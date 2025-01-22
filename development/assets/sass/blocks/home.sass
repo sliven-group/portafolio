@@ -1,0 +1,171 @@
+.b1
+	padding-bottom: 70px
+	padding-top: 60px
+.b1Title
+	font-size: 90px
+	+fontg(60, 78)
+	font-weight: 800
+	margin: 0px
+	padding-bottom: 30px
+.b1Text
+	font-size: 26px
+	margin-bottom: 40px
+	+fontg(20, 26)
+	.typed
+		color: #0563bb
+		letter-spacing: 1px
+.b1WrapText
+	position: relative
+	padding-bottom: 10px
+	margin-bottom: 40px
+	text-align: center
+	font-size: 37px
+	+fontg(30, 37)
+	&:before
+		content: ""
+		position: absolute
+		display: block
+		width: 120px
+		height: 1px
+		background: #ddd
+		bottom: 1px
+		left: calc(50% - 60px)
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		width: 40px
+		height: 3px
+		background: #0563bb
+		bottom: 0
+		left: calc(50% - 20px)	
+.b1List
+	margin: 0px
+	padding: 0px
+	position: relative
+	border-radius: 10px
+	border: 1px solid #eaeaec
+	display: block
+	overflow: hidden
+	.swiper
+		box-sizing: border-box
+		position: relative
+		&:before
+			content: ""
+			background-color: black
+			z-index: 2
+			opacity: 0.15
+			position: absolute
+			left: 0px
+			top: 0px
+			width: 100%
+			height: 100%
+			pointer-events: none
+		.swiper-button-next,  .swiper-button-prev
+			color: white 
+			font-weight: 800
+.b1ListMaster
+	display: grid
+	grid-template-columns: repeat(2, calc(50% - 10px))
+	gap: 20px 20px
+
+.b1Item
+	list-style: none
+	margin: 0px
+	padding: 0px
+	top: 0px
+	left: 0px
+	// overflow: hidden
+	// opacity: 0
+	// position: absolute
+	// z-index: -1
+	// flex: 1
+	picture
+		overflow: hidden
+		display: block
+	img
+		max-width: 100%
+		height: 480px
+		width: 100%
+		display: block
+		object-fit: cover
+		+transition-all()
+		object-position: top
+	@media screen and (min-width: 1024px)
+		&:hover
+			img
+				transform: scale(1.02)
+	// &:nth-child(even)
+	// 	margin-top: -148px
+	// 	background: red
+	// 	img
+	// 		height: 600px
+	// &:nth-child(odd)
+	// 	img
+	// 		height: 750px
+	// &:nth-child(2)
+	// 	margin-top: 0px
+.b1ItemP
+	position: relative
+	opacity: 1
+	visibility: visible
+	z-index: 1
+.b1Wrap
+	background: #f5f5f7
+	padding: 20px 20px
+	.g1Title
+		font-weight: 800
+		color: #000
+	.g1Text
+		color: #525252
+		line-height: 1.4
+		font-size: 19px
+	// height: 100px
+	// display: flex
+	// align-items: center
+	// justify-content: space-between
+
+.b2
+	padding-top: 80px
+	// padding-bottom: 30px
+.b2List
+	display: grid
+	grid-template-columns: repeat(4, calc(25% - 16.333333px))
+	gap: 40px 24px
+.b2Item
+	display: flex
+	flex: 1
+.b2ItemNumber
+	// margin-right: 1rem
+	font-size: 80px
+	+fontg(70, 80)
+	writing-mode: vertical-lr
+	transform: rotate(180deg)
+	-webkit-text-stroke: 1px
+	background-clip: text
+	-webkit-text-fill-color: transparent
+	display: flex
+	align-self: flex-start
+.b2ItemText
+	font-size: 20px
+	font-weight: 400
+	+fontg(16, 20)
+	h4
+		font-size: 24px
+		+fontg(20, 24)
+
+@media screen and (max-width: 992px)
+	.b2List
+		grid-template-columns: repeat(3, calc(33.33333% - 16.333333px))
+
+
+@media screen and (max-width: 768px)
+	.b2List
+		grid-template-columns: repeat(2, calc(50% - 16.333333px))
+
+
+@media screen and (max-width: 600px)
+	.b2List
+		grid-template-columns: repeat(1,100%)
+	.b1ListMaster
+		grid-template-columns: repeat(1,100%)
