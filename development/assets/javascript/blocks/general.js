@@ -4,10 +4,19 @@ if(mySwiper){
     for (var i = 0; i < mySwiper.length; i++) {
         mySwiper[i].classList.add("mySwiper-"+i)
         var swiper = new Swiper(".mySwiper-"+i, {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
+          // navigation: {
+          //   nextEl: ".swiper-button-next",
+          //   prevEl: ".swiper-button-prev",
+          // },
+            effect: "fade",
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     }
 }
